@@ -19,7 +19,8 @@
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <ImageView
+        android:layout_margin="20sp"
         android:src="@drawable/ic_baseline_add_24"
         android:id="@+id/btn_add"
         android:layout_alignParentBottom="true"

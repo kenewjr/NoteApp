@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.EditFragment">
+
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="edit note"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/edit_judul"
+        android:layout_marginTop="10dp"
+        android:autofillHints="name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="judul"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/edit_isi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:autofillHints="name"
+        android:hint="isi"
+        android:inputType="textMultiLine"
+        />
+
+    <Button
+        android:id="@+id/btn_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="10dp"
+        android:text="edit" />
+
+</LinearLayout>

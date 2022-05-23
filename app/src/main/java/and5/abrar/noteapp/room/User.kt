@@ -1,4 +1,4 @@
-package and5.abrar.noteapp.room.user
+package and5.abrar.noteapp.room
 
 import android.os.Parcelable
 import androidx.room.ColumnInfo
@@ -9,7 +9,7 @@ import kotlinx.android.parcel.Parcelize
 @Entity
 @Parcelize
 data class User(
-    @PrimaryKey var username : String,
-    @ColumnInfo(name = "name") var name : String,
-    @ColumnInfo(name = "pass") var pass : String
+    @PrimaryKey var username :String,
+    @ColumnInfo(name = "nama") var nama: String,
+    @ColumnInfo(name = "password") var password: String
 ):Parcelable

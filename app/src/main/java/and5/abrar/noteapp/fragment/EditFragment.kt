@@ -10,11 +10,10 @@ import and5.abrar.noteapp.datastore.NoteManager
 import and5.abrar.noteapp.room.Note
 import and5.abrar.noteapp.room.NoteDatabase
 import android.os.Build
-import android.widget.Toast
 import androidx.annotation.RequiresApi
-import androidx.lifecycle.asLiveData
 import androidx.navigation.Navigation
 import kotlinx.android.synthetic.main.fragment_add_note.*
+import kotlinx.android.synthetic.main.fragment_edit.*
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
 import java.time.LocalDateTime
@@ -22,7 +21,7 @@ import java.time.format.DateTimeFormatter
 import java.time.format.FormatStyle
 
 
-class AddNoteFragment : Fragment() {
+class EditFragment : Fragment() {
     private var noteDatabase : NoteDatabase? = null
     lateinit var noteManager: NoteManager
     override fun onCreateView(
@@ -31,28 +30,30 @@ class AddNoteFragment : Fragment() {
     ): View? {
         noteDatabase = NoteDatabase.getinstance(requireContext())
         noteManager = NoteManager(requireContext())
-        return inflater.inflate(R.layout.fragment_add_note, container, false)
+        return inflater.inflate(R.layout.fragment_edit, container, false)
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        btn_add.setOnClickListener {
+        val noteDetail = arguments?.getParcelable<Note>("detailEdit") as Note
+        edit_judul.setText(noteDetail.judul)
+        edit_isi.setText(noteDetail.isi)
+
+        btn_edit.setOnClickListener {
             val judul = add_judul.text.toString()
             val isi = add_isi.text.toString()
             val current = LocalDateTime.now()
             val formatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM)
             val formatted = current.format(formatter)
-            tambahnote(Note(null,judul,formatted.toString(),isi))
-        }
-    }
-    fun tambahnote(note: Note){
-        GlobalScope.async {
-            val result = noteDatabase?.notedao()?.addNote(note)
-            requireActivity().runOnUiThread(){
-                if(result != 0.toLong()){
-                    Toast.makeText(requireContext(),"note berhasil ditambahkan", Toast.LENGTH_SHORT).show()
-                    Navigation.findNavController(requireView()).navigate(R.id.action_addNoteFragment_to_noteFragment)
+            val up = Note(noteDetail.id,judul,formatted.toString(),isi)
+            GlobalScope.async {
+                val result = noteDatabase?.notedao()?.updateNote(up)
+
+                requireActivity().runOnUiThread{
+                    if (result != 0){
+                        Navigation.findNavController(view).navigate(R.id.action_editFragment_to_noteFragment)
+                    }
                 }
             }
         }

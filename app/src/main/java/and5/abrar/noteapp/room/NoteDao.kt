@@ -1,9 +1,6 @@
 package and5.abrar.noteapp.room
 
-import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Query
+import androidx.room.*
 
 @Dao
 interface NoteDao {
@@ -13,6 +10,12 @@ interface NoteDao {
     fun getNote(): List<Note>
     @Delete
     fun deleteNote(note: Note):Int
+    @Update
+    fun updateNote(note: Note): Int
 
 
+    @Insert
+    fun registerUser(user: User):Long
+    @Query("SELECT * FROM User WHERE User.username = :username")
+    fun getUserRegistered(username:String): User
 }

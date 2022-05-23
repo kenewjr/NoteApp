@@ -49,6 +49,9 @@
         <action
             android:id="@+id/action_detailFragment_to_noteFragment"
             app:destination="@id/noteFragment" />
+        <action
+            android:id="@+id/action_detailFragment_to_editFragment"
+            app:destination="@id/editFragment" />
     </fragment>
     <fragment
         android:id="@+id/addNoteFragment"
@@ -69,6 +72,15 @@
             app:destination="@id/loginFragment" />
         <action
             android:id="@+id/action_profileFragment_to_noteFragment"
+            app:destination="@id/noteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="and5.abrar.noteapp.fragment.EditFragment"
+        android:label="fragment_edit"
+        tools:layout="@layout/fragment_edit" >
+        <action
+            android:id="@+id/action_editFragment_to_noteFragment"
             app:destination="@id/noteFragment" />
     </fragment>
 </navigation>
