@@ -9,18 +9,22 @@ import and5.abrar.noteapp.R
 import and5.abrar.noteapp.datastore.NoteManager
 import and5.abrar.noteapp.room.Note
 import and5.abrar.noteapp.room.NoteDatabase
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.navigation.Navigation
 import kotlinx.android.synthetic.main.fragment_detail.*
+import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
 
 
+@Suppress("DeferredResultUnused")
+@DelicateCoroutinesApi
 class DetailFragment : Fragment() {
     private var noteDatabase : NoteDatabase? = null
-    lateinit var noteManager: NoteManager
+    private lateinit var noteManager: NoteManager
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -30,16 +34,18 @@ class DetailFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_detail, container, false)
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val noteDetail = arguments?.getParcelable<Note>("detail") as Note
-        detail_judul.text = noteDetail.judul
-        detail_note.text = noteDetail.isi
-        detail_waktu.text = noteDetail.waktu
+        detail_judul.text = "Judul : " + noteDetail.judul
+        detail_note.text = "Catatan : " + noteDetail.isi
+        detail_waktu.text = "Waktu : " + noteDetail.waktu
 
         btn_Home.setOnClickListener {
             Navigation.findNavController(requireView()).navigate(R.id.action_detailFragment_to_noteFragment)
         }
+
         btn_Share.setOnClickListener {
             val intent= Intent()
             intent.action=Intent.ACTION_SEND

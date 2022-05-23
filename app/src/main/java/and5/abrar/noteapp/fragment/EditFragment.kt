@@ -1,19 +1,19 @@
 package and5.abrar.noteapp.fragment
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import and5.abrar.noteapp.R
 import and5.abrar.noteapp.datastore.NoteManager
 import and5.abrar.noteapp.room.Note
 import and5.abrar.noteapp.room.NoteDatabase
 import android.os.Build
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.annotation.RequiresApi
+import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
-import kotlinx.android.synthetic.main.fragment_add_note.*
 import kotlinx.android.synthetic.main.fragment_edit.*
+import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
 import java.time.LocalDateTime
@@ -21,9 +21,11 @@ import java.time.format.DateTimeFormatter
 import java.time.format.FormatStyle
 
 
+@Suppress("DeferredResultUnused")
+@DelicateCoroutinesApi
 class EditFragment : Fragment() {
     private var noteDatabase : NoteDatabase? = null
-    lateinit var noteManager: NoteManager
+    private lateinit var noteManager: NoteManager
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -41,8 +43,8 @@ class EditFragment : Fragment() {
         edit_isi.setText(noteDetail.isi)
 
         btn_edit.setOnClickListener {
-            val judul = add_judul.text.toString()
-            val isi = add_isi.text.toString()
+            val judul = edit_judul.text.toString()
+            val isi = edit_isi.text.toString()
             val current = LocalDateTime.now()
             val formatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM)
             val formatted = current.format(formatter)

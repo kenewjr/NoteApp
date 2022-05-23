@@ -1,45 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     android:orientation="vertical"
+    android:background="@drawable/background"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
     tools:context=".fragment.EditFragment">
 
     <TextView
-        android:layout_gravity="center_horizontal"
+        android:textColor="@color/teal_200"
+        android:layout_marginTop="16dp"
+        android:text="Edit Note "
+        android:textSize="42sp"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="edit note"
-        android:textSize="25sp" />
+        tools:ignore="HardcodedText" />
 
-    <EditText
-        android:id="@+id/edit_judul"
-        android:layout_marginTop="10dp"
-        android:autofillHints="name"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="judul"
-        android:inputType="text" />
+        android:layout_marginTop="6dp"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp">
 
-    <EditText
-        android:id="@+id/edit_isi"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_judul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="judul"
+            android:inputType="text"
+            tools:ignore="HardcodedText" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:autofillHints="name"
-        android:hint="isi"
-        android:inputType="textMultiLine"
-        />
+        android:layout_marginTop="6dp"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp">
 
-    <Button
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_isi"
+            android:hint="isi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            tools:ignore="HardcodedText" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_margin="10dp"
         android:id="@+id/btn_edit"
-        android:layout_width="wrap_content"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginVertical="10dp"
-        android:text="edit" />
+        android:background="@drawable/login_btn_bg"
+        android:text="Update Note"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+
+
+
+
+
 
 </LinearLayout>

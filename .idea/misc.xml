@@ -3,18 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/kuliah/kampus-merdeka/materi/binar/android-studio/NoteApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1405" />
+        <entry key="..\:/kuliah/kampus-merdeka/materi/binar/android-studio/NoteApp/app/src/main/res/drawable/background.xml" value="0.1405" />
         <entry key="..\:/kuliah/kampus-merdeka/materi/binar/android-studio/NoteApp/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.1775" />
+        <entry key="..\:/kuliah/kampus-merdeka/materi/binar/android-studio/NoteApp/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.121" />
+        <entry key="..\:/kuliah/kampus-merdeka/materi/binar/android-studio/NoteApp/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.1405" />
         <entry key="..\:/kuliah/kampus-merdeka/materi/binar/android-studio/NoteApp/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.1775" />
-        <entry key="..\:/kuliah/kampus-merdeka/materi/binar/android-studio/NoteApp/app/src/main/res/layout/activity_main.xml" value="0.16576086956521738" />
-        <entry key="..\:/kuliah/kampus-merdeka/materi/binar/android-studio/NoteApp/app/src/main/res/layout/fragment_add_note.xml" value="0.16576086956521738" />
-        <entry key="..\:/kuliah/kampus-merdeka/materi/binar/android-studio/NoteApp/app/src/main/res/layout/fragment_detail.xml" value="0.16576086956521738" />
+        <entry key="..\:/kuliah/kampus-merdeka/materi/binar/android-studio/NoteApp/app/src/main/res/drawable/login_btn_bg.xml" value="0.1405" />
+        <entry key="..\:/kuliah/kampus-merdeka/materi/binar/android-studio/NoteApp/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/kuliah/kampus-merdeka/materi/binar/android-studio/NoteApp/app/src/main/res/layout/fragment_add_note.xml" value="0.264" />
+        <entry key="..\:/kuliah/kampus-merdeka/materi/binar/android-studio/NoteApp/app/src/main/res/layout/fragment_detail.xml" value="0.2" />
         <entry key="..\:/kuliah/kampus-merdeka/materi/binar/android-studio/NoteApp/app/src/main/res/layout/fragment_edit.xml" value="0.16576086956521738" />
         <entry key="..\:/kuliah/kampus-merdeka/materi/binar/android-studio/NoteApp/app/src/main/res/layout/fragment_login.xml" value="0.16576086956521738" />
-        <entry key="..\:/kuliah/kampus-merdeka/materi/binar/android-studio/NoteApp/app/src/main/res/layout/fragment_login2.xml" value="0.16576086956521738" />
-        <entry key="..\:/kuliah/kampus-merdeka/materi/binar/android-studio/NoteApp/app/src/main/res/layout/fragment_note.xml" value="0.16576086956521738" />
+        <entry key="..\:/kuliah/kampus-merdeka/materi/binar/android-studio/NoteApp/app/src/main/res/layout/fragment_login2.xml" value="0.2" />
+        <entry key="..\:/kuliah/kampus-merdeka/materi/binar/android-studio/NoteApp/app/src/main/res/layout/fragment_note.xml" value="0.2" />
         <entry key="..\:/kuliah/kampus-merdeka/materi/binar/android-studio/NoteApp/app/src/main/res/layout/fragment_profile.xml" value="0.16576086956521738" />
         <entry key="..\:/kuliah/kampus-merdeka/materi/binar/android-studio/NoteApp/app/src/main/res/layout/fragment_register.xml" value="0.16576086956521738" />
         <entry key="..\:/kuliah/kampus-merdeka/materi/binar/android-studio/NoteApp/app/src/main/res/layout/item_note.xml" value="0.16576086956521738" />
+        <entry key="..\:/kuliah/kampus-merdeka/materi/binar/android-studio/NoteApp/app/src/main/res/menu/detail_menu.xml" value="0.264" />
+        <entry key="..\:/kuliah/kampus-merdeka/materi/binar/android-studio/NoteApp/app/src/main/res/menu/note.xml" value="0.22239583333333332" />
       </map>
     </option>
   </component>
